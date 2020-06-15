@@ -136,6 +136,7 @@ plugins=(
   zsh-autosuggestions
   extract
   docker
+  docker-compose
   autopep8
   pep8
   pip
@@ -185,47 +186,10 @@ source $ZSH/oh-my-zsh.sh
 # }
 
 # Export PATHs
-export PATH="/usr/bin:$PATH"
-export GOOGLE_APPLICATION_CREDENTIALS="/home/fernando/Documents/envioclick/insaite-bigquery-fernando.json"
-PYTHONPATH="${PYTHONPATH}:/home/fernando/Documents/Diplomado/src/diplomado/"
-export PYTHONPATH
+# export PATH="/usr/bin:$PATH"
+# PYTHONPATH="${PYTHONPATH}:/home/fernando/.../"
+# export PYTHONPATH
 
 # Aliases
-alias diplomado='source /home/fernando/virtualenvs/diplomado/bin/activate'
-alias automl='source /home/fernando/virtualenvs/automl/bin/activate'
 alias ls='colorls --group-directories-first'
 
-# ENV variables
-export RABBITMQ_HOST=172.16.238.5
-export RABBITMQ_PORT=5672
-export RABBITMQ_USER=guest
-export RABBITMQ_PWD=guest
-export RABBITMQ_VIRTUAL_HOST=/
-export RABBITMQ_EXCHANGE=automl_logs
-export RABBITMQ_EXCHANGE_TYPE=topic
-export RABBITMQ_ROUTING_KEY=frontend.messages.automl
-
-export MONGO_ML_HOST=172.16.238.4
-export MONGO_ML_PORT=27017
-export MONGO_ML_DATABASE=automldb
-export MONGO_ML_COLLECTION_REQ=requests
-export MONGO_ML_COLLECTION_TRAIN=trainings
-export MONGO_ML_COLLECTION_RESP=responses
-export MONGO_ML_USERNAME=guest
-export MONGO_ML_PASSWORD=guest
-
-export MONGO_DE_HOST=172.16.238.3
-export MONGO_DE_PORT=27017
-export MONGO_DE_DATABASE=engineeringdb
-export MONGO_DE_COLLECTION=metadata
-export MONGO_DE_USERNAME=guest
-export MONGO_DE_PASSWORD=guest
-
-export MINIO_HOST=172.16.238.2
-export MINIO_PORT=9000
-export MINIO_BUCKET=ml-module
-export MINIO_ACCESS_KEY=minioadmin
-export MINIO_SECRET_KEY=minioadmin
-
-export MONGO_CELERY_DB=automldb
-export MONGO_CELERY_COLLECTION=celery_metadata
